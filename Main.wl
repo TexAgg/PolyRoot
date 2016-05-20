@@ -47,6 +47,7 @@ rts = Append[rts,rt]
 
 
 q = PolynomialQuotient[q,x-rt,x]
+q==1
 
 
 (* ::Subsection:: *)

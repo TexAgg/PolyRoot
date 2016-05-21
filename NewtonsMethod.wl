@@ -17,9 +17,9 @@ NewtonsMethodList[f_, {x_, x0_}, n_] :=
 		Derivative[1][Function[x, f]][#]& , x0, n];
 
 
-(* This gives me an infinite loop somehow. *)
+(* If n is too large (n>5), this becomes reallllly slow. *)
 Clear[NewtonsMethodRoots]
-NewtonsMethodRoots[f_, {x_,x0_}, n_] := Module[{roots={},expr=f, deg=Exponent[f,x]},
+NewtonsMethodRoots[f_, {x_,x0_}, n_] := Module[{roots={},expr=f},
 	While[expr=!=1,
 		root = Last[NewtonsMethodList[expr, {x,x0}, n]];
 		(*Print[root];*)

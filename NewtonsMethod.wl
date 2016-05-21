@@ -17,16 +17,17 @@ NewtonsMethodList[f_, {x_, x0_}, n_] :=
 		Derivative[1][Function[x, f]][#]& , x0, n];
 
 
+(* This gives me an infinite loop somehow. *)
 Clear[NewtonsMethodRoots]
 NewtonsMethodRoots[f_, {x_,x0_}, n_] := Module[{roots={},expr=f, deg=Exponent[f,x]},
-	While[expr!=1,
+	While[expr=!=1,
 		root = Last[NewtonsMethodList[expr, {x,x0}, n]];
 		(*Print[root];*)
 		roots = Append[roots, root];
 		(*Print[roots];*)
 		expr = PolynomialQuotient[expr, x-root, x]
 	];
-	roots
+	roots//Round
 ];
 
 

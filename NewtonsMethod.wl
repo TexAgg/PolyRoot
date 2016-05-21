@@ -25,7 +25,7 @@ NewtonsMethodRoots[f_, {x_,x0_}, n_] := Module[{roots={},expr=f, deg=Exponent[f,
 		(*Print[root];*)
 		roots = Append[roots, root];
 		(*Print[roots];*)
-		expr = PolynomialQuotient[expr, x-root, x]
+		expr = PolynomialQuotient[expr, x-root, x];
 	];
 	roots//Round
 ];

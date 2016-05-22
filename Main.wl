@@ -56,3 +56,32 @@ NewtonsMethodRoots[expr,{x,0},5]
 
 (* ::Section:: *)
 (*Analytic Functions*)
+
+
+Clear[expr]
+expr = z^5-2 z+3
+(* Find the roots. *)
+NSolve[expr==0,z];
+(* All of the roots are within a circle of radius 1.5. *)
+roots = z/.%
+Abs[%]
+
+
+c = Circle[{0,0},1.5]
+
+
+integrand = z^(Exponent)[expr,z]D[expr,z]/expr
+NSolve[Denominator[Simplify[%]]==0,z];
+poles = z/.%;
+Select[poles,Abs[#]<1.5&]
+Residue[integrand,{z,#}]&/@%
+Total[%]
+(* This is more or less the same as the total of the residues in C.*)
+Total[roots]
+
+
+(* ::Section::Closed:: *)
+(*Misc*)
+
+
+(*Import["report.tex","OutputFile"\[Rule]"Main.nb"]*)

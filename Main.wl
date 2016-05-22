@@ -47,8 +47,12 @@ expr
 NewtonsMethodRoots[expr,{x,0},5]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Durand-Kerner Method*)
 
 
 (* https://en.wikipedia.org/wiki/Durand%E2%80%93Kerner_method *)
+
+
+(* ::Section:: *)
+(*Analytic Functions*)

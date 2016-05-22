@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage {mathtools, graphicx, amsfonts, amssymb, comment}
+\usepackage{enumerate}
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\addbibresource{sources.bib}
+
+\title{Finding Roots of Functions}
+\author{Matt Gaikema}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\section{Newton's Method}
+
+\section{Analytic Functions}
+
+According to \cite{delves1967numerical},
+if $C$ is a closed curve in the complex plane which does not pass through a zero of $f(z)$, and $R$ is in the interior of $C$, 
+then
+\begin{equation}
+	s_n=\frac{1}{2\pi i}\oint_Cz^N\frac{f'(z)}{f(z)}dz=\sum_{j=1}^vz_j^N,
+\end{equation}
+where $z_j,j\in\{1,2,\dots,v\}$ are the zeros of $f$ which lie in $R$.\footnote{A multiple zero is counted according to its multiplicity.}
+
+\printbibliography
+
+\end{document}

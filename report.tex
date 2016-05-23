@@ -22,14 +22,22 @@
 
 \section{Analytic Functions}
 
+\subsection{Argument Principle}
+
 According to \cite{delves1967numerical},
 if $C$ is a closed curve in the complex plane which does not pass through a zero of $f(z)$, and $R$ is in the interior of $C$, 
 then
-\begin{equation}
+\begin{equation}\label{eqn:arg-princ}
 	s_n=\frac{1}{2\pi i}\oint_Cz^N\frac{f'(z)}{f(z)}dz=\sum_{j=1}^vz_j^N,
 \end{equation}
 where $z_j,j\in\{1,2,\dots,v\}$ are the zeros of $f$ which lie in $R$.
 A multiple zero is counted according to its multiplicity.
+When $N=0$, equation \ref{eqn:arg-princ} gives the number of zeros in $C$.
+This is a result of the argument principle.\cite{wiki:argument-principle}
+
+\subsection{Numerically finding roots}
+
+\cite{delves1967numerical} gives a method for numerically locating the zeros of an analytic function (hence the title).
 
 \printbibliography
 

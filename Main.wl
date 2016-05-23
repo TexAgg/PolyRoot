@@ -58,6 +58,10 @@ NewtonsMethodRoots[expr,{x,0},5]
 (*Analytic Functions*)
 
 
+(* ::Subsection:: *)
+(*Argument Principle*)
+
+
 Clear[expr]
 expr = z^5-2 z+3
 (* Find the roots. *)
@@ -70,18 +74,25 @@ Abs[%]
 c = Circle[{0,0},1.5]
 
 
-integrand = z^(Exponent)[expr,z]D[expr,z]/expr
-NSolve[Denominator[Simplify[%]]==0,z];
+Clear[n]
+n = 0;
+integrand = z^n D[expr,z]/expr
+(* Find where the denominator is 0, AKA the poles. *)
+Solve[Denominator[Simplify[%]]==0,z];
 poles = z/.%;
-Select[poles,Abs[#]<1.5&]
-Residue[integrand,{z,#}]&/@%
+Select[poles,Abs[#]<1.5&];
+Residue[integrand,{z,#}]&/@%;
+(* This is the number of roots in the region. *)
 Total[%]
-(* This is more or less the same as the total of the residues in C.*)
-Total[roots]
+
+
+(* ::Subsection:: *)
+(*"A numerical method for locating the zeros of an analytic function"*)
 
 
 (* ::Section::Closed:: *)
 (*Misc*)
 
 
+(* https://reference.wolfram.com/language/ref/format/LaTeX.html *)
 (*Import["report.tex","OutputFile"\[Rule]"Main.nb"]*)

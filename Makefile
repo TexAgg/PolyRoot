@@ -8,7 +8,7 @@ $(TEXFILE).pdf: $(TEXFILE).tex
 	pdflatex $(TEXFILE)
 
 clean:
-	del *.aux *.blg *.out *.bbl *.log $(TEXFILE).run.xml $(TEXFILE)-blx.bib
+	del *.aux *.blg *.out *.bbl *.log $(TEXFILE).run.xml $(TEXFILE)-blx.bib $(TEXFILE).synctex.gz
 	
 view: $(TEXFILE).pdf
 	$(TEXFILE).pdf &

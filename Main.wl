@@ -87,7 +87,7 @@ Total[%]
 
 
 (* ::Subsection:: *)
-(*"A numerical method for locating the zeros of an analytic function"*)
+(*Numerically finding roots*)
 
 
 (* ::Section::Closed:: *)

@@ -8,7 +8,7 @@
 
 \addbibresource{sources.bib}
 
-\title{Finding Roots of Functions}
+\title{Finding Roots of Polynomials}
 \author{Matt Gaikema}
 \date{\today}
 
@@ -17,6 +17,28 @@
 \maketitle
 
 \section{Introduction}
+
+\section{General Formulas}
+
+If a polynomial is of degree 4 or less, the roots can easily (relatively) be found with explicit formulas.
+Galois showed us that there is not an explicit formula for 5th degree polynomials and above.
+
+\subsection{Quadratic Polynomials}
+
+For polynomials of the form $ax^2+bx+c$, the roots are of the form
+\begin{equation}
+	x = \frac{-b\pm\sqrt{b^2-4ac}}{2a},
+\end{equation}
+as many people know from seventh or eighth grade. 
+
+\subsection{Cubic Polynomials}
+
+For a polynomial of the form $ax^3+bx^2+cx+d$, the formula for the roots is slightly more complex than that of quadratic polynomials.\cite{wiki:cubic}
+\begin{equation}
+	x_k=-\frac{1}{3a}\bigg(b+u_kC+\frac{\Delta_0}{u_kC}\bigg),\,k\in{1,2,3},
+\end{equation}
+where 
+\[u_1=1,\,u_2=\frac{-1+i\sqrt{3}}{2},\,u_3=\frac{-1-i\sqrt{3}}{2}\]
 
 \section{Newton's Method}
 
@@ -35,9 +57,21 @@ A multiple zero is counted according to its multiplicity.
 When $N=0$, equation \ref{eqn:arg-princ} gives the number of zeros in $C$.
 This is a result of the argument principle.\cite{wiki:argument-principle}
 
+Unfortunately, calculating $s_n$ using the Residue Theorem usually involves finding the roots anyways.
+
 \subsection{Numerically finding roots}
 
-\cite{delves1967numerical} gives a method for numerically locating the zeros of an analytic function (hence the title).
+\cite{delves1967numerical} gives a method, which I will refer to as the "Delves-Lyness Method", for numerically locating the zeros of an analytic function (hence the title),
+which has four sections:
+\begin{enumerate}
+	% 1
+	\item Evauluate the number of roots, $s_0=v$, in the region.
+	If the number is manageble, calculate $s_1,s_2,\dots,s_v$, and carry on to step (3).
+	Otherwise, continue.
+	% 2
+	\item
+	Subdivide the region into smaller subregions and repeat step (1).
+\end{enumerate}
 
 \printbibliography
 

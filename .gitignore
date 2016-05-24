@@ -2,7 +2,7 @@
 # My additions
 *.pdf
 
-# Created by https://www.gitignore.io/api/latex,tex
+# Created by https://www.gitignore.io/api/latex,tex,visualstudiocode
 
 ### LaTeX ###
 *.acn
@@ -228,3 +228,7 @@ TSWLatexianTemp*
 # pdfcomment
 .upa
 .upb
+
+
+### VisualStudioCode ###
+.vscode

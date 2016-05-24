@@ -39,6 +39,18 @@ For a polynomial of the form $ax^3+bx^2+cx+d$, the formula for the roots is slig
 \end{equation}
 where 
 \[u_1=1,\,u_2=\frac{-1+i\sqrt{3}}{2},\,u_3=\frac{-1-i\sqrt{3}}{2}\]
+are the cubic roots of unity and
+\[C=\sqrt[3]{\frac{\Delta_1+\sqrt{\Delta_1^2-4\Delta_0^3}}{2}},\]
+with 
+\begin{align*}
+	\Delta_0 =& b^2-3ac \\
+	\Delta_1 =& 2b^3-9abc+27a^2d.
+\end{align*}
+Also,
+\[\Delta_1^2-4\Delta_0^3=27a^2\Delta,\]
+where $\Delta$ is the discriminant, $18abcd-4b^3d+b^2c^2-4ac^3-27a^2d^2$.
+
+This formula was probably not taught to most middle schoolers.
 
 \section{Newton's Method}
 
@@ -59,7 +71,7 @@ This is a result of the argument principle.\cite{wiki:argument-principle}
 
 Unfortunately, calculating $s_n$ using the Residue Theorem usually involves finding the roots anyways.
 
-\subsection{Numerically finding roots}
+\subsection{Numerically Finding Roots}
 
 \cite{delves1967numerical} gives a method, which I will refer to as the "Delves-Lyness Method", for numerically locating the zeros of an analytic function (hence the title),
 which has four sections:
@@ -71,7 +83,14 @@ which has four sections:
 	% 2
 	\item
 	Subdivide the region into smaller subregions and repeat step (1).
+	% 3
+	\item Given a region and $s_1,s_2,\dots,s_v$, construct and solve the equivalent polynomial $p(z)$.
+	% 4
+	\item Optionally, take the roots of $p(z)$ as approximations to the roots of $f(z)$,
+	and refine these using an iterative method on $f(z)$.
 \end{enumerate}
+The paper considers two shapes for $R$, squares and circles, 
+and  gives three methods for determining $s_N$ in the case of circles.
 
 \printbibliography
 

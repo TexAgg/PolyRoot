@@ -18,6 +18,20 @@ SetOptions[EvaluationNotebook[], CellContext -> Notebook]
 (* Set working directory to this one. *)
 SetDirectory[NotebookDirectory[]]
 Import["NewtonsMethod.wl"]
+Import["CubicFunctions.wl"]
+
+
+(* ::Section:: *)
+(*Cubic Functions*)
+
+
+expr = 2x^3-3x^2-3x+2
+
+
+CubicRoot[expr,x]
+
+
+Solve[expr==0,x]
 
 
 (* ::Section::Closed:: *)

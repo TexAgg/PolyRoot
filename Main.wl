@@ -53,12 +53,22 @@ rt = N[%]//Last
 expr===1
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*NewtonsMethodRoots test*)
 
 
 expr
 NewtonsMethodRoots[expr,{x,0},5]
+
+
+(* ::Section:: *)
+(*Graeffe's Method*)
+
+
+(* https://en.wikipedia.org/wiki/Graeffe%27s_method *)
+(* http://mathworld.wolfram.com/GraeffesMethod.html *)
+(* Done here in Mathematica: 
+http://mathfaculty.fullerton.edu/mathews/n2003/GraeffeMethodMod.html *)
 
 
 (* ::Section::Closed:: *)

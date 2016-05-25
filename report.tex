@@ -65,6 +65,41 @@ Let $p$ be a polynomial of degree $n$, where
 Then,
 \[p(-x)=(-1)^n(x+\zeta_1)(x+\zeta_2)\dots(x+\zeta_n).\]
 
+Let $q(x)$ be the polynomial with roots $\zeta_1^2,\zeta_2^2,\dots,\zeta_n^2$,
+\[q(x)=(x-\zeta_1^2)(x-\zeta_2^2)\dots(x-\zeta_n^2).\]
+As shown in \cite{wiki:graeffe}, 
+\[q(x^2)=(-1)^np(x)p(-x).\]
+$q(x)$ can be computed with operations on the coefficients of $p(x)$.
+Let
+\begin{align*}
+	p(x) =& x^n+a_1x^{n-1}+\dots+a_{n-1}x+a_n \\
+	q(x) =& x^n+b_1x^{n-1}+\dots+b_{n-1}x+b_n. 
+\end{align*}
+Then,
+\[b_k=(-1)^ka_k^2+2\sum_{j=0}^{k-1}(-1)^ja_ja_{2k-j},\,a_0=b_0=1.\]
+
+Repeating $k$ times gives a polynomial
+\[q^k(y)=y^n+a_1^ky^{n-1}+\dots+a_{n-1}^ky+a_n^k\]
+with roots
+\[\gamma_1=\zeta_1^{2^k},\gamma_2=\zeta_2^{2^k},\dots,\gamma_n=\zeta_n^{2^k}.\]
+
+Then, Vieta's relations\cite{wiki:vieta} are used: 
+\begin{align*}
+	a_1^k =& -(\gamma_1+\gamma_2+\dots+\gamma_n) \\
+	a_2^k =& \gamma_1\gamma_2+\gamma_1\gamma_3+\dots+\gamma_{n-1}\gamma_n \\
+	\vdots & \\
+	a_n^k =& (-1)^n(\gamma_1\gamma_2\dots\gamma_n).
+\end{align*}
+
+Since the roots are seperated, the first term is larger than the rest.\cite{mathworld:graeffe}
+Thus we have
+\begin{align*}
+	a_1^k \approx& -\gamma_1 \\
+	a_2^k \approx& \gamma_1\gamma_2 \\
+	\vdots & \\
+	a_n^k \approx& (-1)^n(\gamma_1\gamma_2\dots\gamma_n).
+\end{align*}
+
 \section{Analytic Functions}
 
 \subsection{Argument Principle}

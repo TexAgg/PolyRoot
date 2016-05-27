@@ -21,7 +21,7 @@ Import["NewtonsMethod.wl"]
 Import["CubicFunctions.wl"]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Cubic Functions*)
 
 
@@ -71,6 +71,27 @@ NewtonsMethodRoots[expr,{x,0},5]
 http://mathfaculty.fullerton.edu/mathews/n2003/GraeffeMethodMod.html *)
 
 
+Clear[x,expr]
+expr = 24 + 14x - 13x^2 -2x^3 + x^4
+
+
+(* https://reference.wolfram.com/language/ref/Evaluate.html *)
+p = Function[x, Evaluate[expr]]
+
+
+(* q(x^2) *)
+q2 = (-1)^Exponent[expr,x] * p[x] * p[-x]
+Function[x,Evaluate[q2]]
+q = %[Sqrt[x]]//Expand
+
+
+Clear[a,b]
+a = CoefficientList[expr,x]//Reverse
+
+
+Solve[q==0,x]
+
+
 (* ::Section::Closed:: *)
 (*Durand-Kerner Method*)
 
@@ -78,7 +99,7 @@ http://mathfaculty.fullerton.edu/mathews/n2003/GraeffeMethodMod.html *)
 (* https://en.wikipedia.org/wiki/Durand%E2%80%93Kerner_method *)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Analytic Functions*)
 
 

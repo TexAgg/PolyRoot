@@ -1,5 +1,6 @@
 # PolyRoot
 Implementing and comparing different algorithms for finding roots of polynomials.
+The report, or whatever is completed so far, can be found [here](https://dl.dropboxusercontent.com/s/9waa7il556qoka1/report.pdf?dl=0).
 
 ---
 
@@ -14,7 +15,7 @@ These are just various programming resources.
 * [BibLaTeX](https://www.sharelatex.com/learn/Bibliography_management_in_LaTeX#Reference_guide)
 
 ### Papers
-Various academic papers found over the subject are saved [here](https://www.dropbox.com/sh/e8a5k5idczoh029/AAAZhk3DjnDra5GlLcDcdwrBa?dl=0).
+Various academic papers found over the subject are saved [here](https://dl.dropboxusercontent.com/sh/e8a5k5idczoh029/AAAZhk3DjnDra5GlLcDcdwrBa?dl=0).
 
 ### Misc.
 * [Chebfun](http://www.chebfun.org/examples/roots/ComplexRoots.html)

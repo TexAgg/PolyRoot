@@ -16,7 +16,18 @@
 
 \maketitle
 
+%%%%%%%%%%
+% INTRODUCTION %
+%%%%%%%%%%
+
 \section{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%
+% GENERAL FORMULAS %
+%%%%%%%%%%%%%
 
 \section{General Formulas}
 
@@ -51,6 +62,13 @@ Also,
 where $\Delta$ is the discriminant, $18abcd-4b^3d+b^2c^2-4ac^3-27a^2d^2$.
 
 This formula was probably not taught to most middle schoolers.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%
+% NEWTON'S METHOD %
+%%%%%%%%%%%%%
 
 \section{Newton's Method}
 
@@ -103,9 +121,63 @@ Thus we have
 \end{align*}
 % Finish this
 
-\smallskip
+\subsection{An alternate approach}
 
 In his graduate thesis\cite{iterative}, Wankere Mekwi details a similar variant of Graeffe's Method.
+\begin{equation}\label{graeffeBase}
+	p_0(z)=a_nz^n+a_{n-1}z^{n-1}+\dots+a_0,
+\end{equation}
+where $a_n=1$.
+Equation \ref{graeffeBase} is replaced with a polynomial still of degree $n$ whose roots are the squares of the roots of Equation \ref{graeffeBase}.
+\begin{equation}\label{graeffe:p1}
+	p_1(z^2)=(-1)^np_0(z)p_0(-z),
+\end{equation}
+where $p_1$ is the polynomial whose zeros are the squares of the zeros of $p_0$.
+This can be repeated such that
+\begin{equation}
+	p_{r+1}(z^2)=(-1)^np_r(z)p_r(-z)
+\end{equation}
+is the polynomial has roots which are the squares of the roots of $p_r$.
+Each iteration $r$ is referred to as a Graeffe Iteration.\cite{graeffe-iteration}
+If the coefficients of $p_r(z)$ are $a_j^{(r)},j=0,1,\dots,n$, then
+\begin{equation}
+	a_j^{(r+1)}=(-1)^{n-j}\bigg[(a_j^{(r)})^2+2\sum^{\min(n-j,n)}_{k=1}(-1)^ka_{j-k}^{(r)}a_{j+k}^{(r)}\bigg].
+\end{equation}
+The coeffecients of $p_r$ satisfy
+\begin{equation}
+	\begin{aligned}
+		a_0^{(r)} =& \sigma_0 = 1 \\
+		&\vdots \\
+		a_j^{(r)} =& (-1)^{n-j}\sigma_{n-j}\big(\zeta_1^{2^r},\zeta_2^{2^r},\dots,\zeta_n^{2^r}\big) \\
+		&\vdots \\
+		a_{n-1}^{(r)} =& (-1)^{n-1}\sigma_{n-1}\big(\zeta_1^{2^r},\zeta_2^{2^r},\dots,\zeta_n^{2^r}\big) \\
+		a_n^{(r)} =& (-1)^n\sigma_n\big(\zeta_1^{2^r},\zeta_2^{2^r},\dots,\zeta_n^{2^r}\big),
+	\end{aligned}
+\end{equation}
+where $\sigma_j$ is the $j$-th Elementary Symetric Polynomial\cite{wiki:symetric},
+and the $\zeta_j$ are the roots of $p_0$.
+If $|\zeta_1|<|\zeta_2|<\dots<|\zeta_n|$, then we can make an approximation:
+\begin{equation}
+	\begin{aligned}
+		a_0^{(r)} =& \sigma_0 = 1 \\
+		&\vdots \\
+		a_j^{(r)} \approx& (-1)^{n-j}\zeta_{j+1}^{2^r}\dots\zeta_n^{2^r} \\
+		\vdots \\
+		a_{n-1}^{(r)} \approx& (-1)^{n-1}\zeta_2^{2^r}\dots\zeta_n^{2^r} \\
+		a_n^{(r)} =& (-1)^n\zeta_1^{2^r}\zeta_2^{2^r}\dots\zeta_n^{2^r}.
+	\end{aligned}
+\end{equation}
+Thus we have
+\begin{equation}
+	\zeta_j^{2^r}\approx-\frac{a_j^{(r)}}{a_{j+1}^{(r)}}.
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%
+% ANALYTIC FUNCTIONS %
+%%%%%%%%%%%%%%
 
 \section{Analytic Functions}
 
@@ -144,6 +216,9 @@ which has four sections:
 \end{enumerate}
 The paper considers two shapes for $R$, squares and circles, 
 and  gives three methods for determining $s_N$ in the case of circles.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \printbibliography
 

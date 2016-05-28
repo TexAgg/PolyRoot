@@ -19,7 +19,7 @@ NewtonsMethodList[f_, {x_, x0_}, n_] :=
 
 (* If n is too large (n>5), this becomes reallllly slow. *)
 Clear[NewtonsMethodRoots]
-NewtonsMethodRoots[f_, {x_,x0_}, n_] := Module[{roots={},expr=f},
+NewtonsMethodRoots[f_, {x_,x0_}, n_] := Module[{roots={},expr=f,root},
 	While[expr=!=1,
 		root = Last[NewtonsMethodList[expr, {x,x0}, n]];
 		(*Print[root];*)

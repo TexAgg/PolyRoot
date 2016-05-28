@@ -19,6 +19,7 @@ SetOptions[EvaluationNotebook[], CellContext -> Notebook]
 SetDirectory[NotebookDirectory[]]
 Import["NewtonsMethod.wl"]
 Import["CubicFunctions.wl"]
+Import["GraeffesMethod.wl"]
 
 
 (* ::Section::Closed:: *)
@@ -75,21 +76,12 @@ Clear[x,expr]
 expr = 24 + 14x - 13x^2 -2x^3 + x^4
 
 
-(* https://reference.wolfram.com/language/ref/Evaluate.html *)
-p = Function[x, Evaluate[expr]]
+GraeffeIteration[expr,x,1]//Expand
+GraeffeIteration[expr,x,2]//Expand
 
 
-(* q(x^2) *)
-q2 = (-1)^Exponent[expr,x] * p[x] * p[-x]
-Function[x,Evaluate[q2]]
-q = %[Sqrt[x]]//Expand
-
-
-Clear[a,b]
-a = CoefficientList[expr,x]//Reverse
-
-
-Solve[q==0,x]
+Solve[expr==0,x]
+GraeffeFindRoots[expr,x,2]//N
 
 
 (* ::Section::Closed:: *)

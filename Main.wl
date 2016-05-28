@@ -105,7 +105,7 @@ GraeffeFindRoots[expr,x,2]//N
 (* https://en.wikipedia.org/wiki/Durand%E2%80%93Kerner_method *)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Analytic Functions*)
 
 
@@ -145,6 +145,6 @@ Total[%]
 (*Misc*)
 
 
-(* https://reference.wolfram.com/language/ref/format/LaTeX.html *)
-(* Convert TeX document to Mathematica notebook because why not. *)
-Import["report.tex","OutputFile"->"report.nb"];
+(* Convert TeX document to Mathematica notebook because why not.
+https://reference.wolfram.com/language/ref/format/LaTeX.html *)
+(* Import["report.tex","OutputFile"\[Rule]"report.nb"]; *)

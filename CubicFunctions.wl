@@ -1,5 +1,12 @@
 (* ::Package:: *)
 
+(* :Title: Cubic Functions *)
+(* :Context: CubicFunctions` *)
+(* :Author: Matt Gaikema *)
+(* :Mathematica Version: 10.4 *)
+(* :Keywords: Roots, Cubic Polynomials *)
+
+
 BeginPackage["CubicFunctions`"]
 
 

@@ -1,5 +1,12 @@
 (* ::Package:: *)
 
+(* :Title: Newton's Method *)
+(* :Context: NewtonsMethod` *)
+(* :Author: Matt Gaikema *)
+(* :Mathematica Version: 10.4 *)
+(* :Keywords: Roots, Polynomials *)
+
+
 BeginPackage["NewtonsMethod`"];
 
 

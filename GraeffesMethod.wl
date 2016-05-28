@@ -1,5 +1,13 @@
 (* ::Package:: *)
 
+(* :Title: Graeffe's Method *)
+(* :Context: GraeffesMethod` *)
+(* :Author: Matt Gaikema *)
+(* :Date: 5/27/2016 *)
+(* :Mathematica Version: 10.4 *)
+(* :Keywords: Roots, Polynomials *)
+
+
 BeginPackage["GraeffesMethod`"]
 
 

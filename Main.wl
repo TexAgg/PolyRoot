@@ -141,7 +141,7 @@ Total[%]
 (*Numerically finding roots*)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Misc*)
 
 

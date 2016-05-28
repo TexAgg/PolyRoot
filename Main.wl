@@ -8,6 +8,14 @@
 (*Matt Gaikema*)
 
 
+(* ::Text:: *)
+(*Various root-finding algorithms are tested here.*)
+(*These are implimented in other packages.*)
+(**)
+(*https://bitbucket.org/gaikema/polyroot/src*)
+(*https://github.com/TexAgg/PolyRoot*)
+
+
 (* https://en.wikipedia.org/wiki/Root-finding_algorithm *)
 
 

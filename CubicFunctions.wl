@@ -10,7 +10,7 @@
 BeginPackage["CubicFunctions`"]
 
 
-CubicRoot::usage = "Calculates the roots of a cubic function using the formual."
+CubicRoot::usage = "Calculates the roots of a cubic function using the formula."
 
 
 Begin["`Private`"]
@@ -25,7 +25,11 @@ CubicRoot[f_,x_] := Module[
 		1,
 		(-1+I Sqrt[3])/2,
 		(-1-I Sqrt[3])/2
-	}
+	},
+	coef,
+	\[CapitalDelta],
+	c,
+	xk
 },
 	(* coef[[1]]=a, coef[[2]]=b, coeff[[3]]=c, coeff[[4]]=d. *)
 	coef = CoefficientList[expr,x]//Reverse;

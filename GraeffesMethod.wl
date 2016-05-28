@@ -18,7 +18,6 @@ GraeffeFindRoots::usage = "Find the roots of a polynomial using r Graeffe Iterat
 Begin["`Private`"]
 
 
-(* Do stuff. *)
 (* https://reference.wolfram.com/language/ref/SymmetricPolynomial.html *)
 
 
@@ -37,6 +36,7 @@ GraeffeIteration[p0_,x_,r_] := Module[{p,n},
 ]
 
 
+Clear[GraeffeFindRoots]
 GraeffeFindRoots[p0_,x_,r_] := Module[{pr, ar,\[Zeta]},
 	pr = GraeffeIteration[p0,x,r];
 	ar = CoefficientList[pr,x];

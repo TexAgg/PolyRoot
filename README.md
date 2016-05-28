@@ -21,3 +21,8 @@ Various academic papers found over the subject are saved [here](https://dl.dropb
 * [Chebfun](http://www.chebfun.org/examples/roots/ComplexRoots.html)
 * http://reference.wolfram.com/language/tutorial/SomeNotesOnInternalImplementation.html#30145
 * [This paper](ftp://nozdr.ru/biblioteka/kolxo3/_Papers/Numerical_methods/Polynomial%20roots/Mekwi%20W.R.%20Iterative%20methods%20for%20roots%20of%20polynomials%20(master%20thesis,%20Oxford,%202001)(68s).pdf)
+
+---
+
+https://bitbucket.org/gaikema/polyroot/src
+https://github.com/TexAgg/PolyRoot

@@ -28,9 +28,22 @@ SetDirectory[NotebookDirectory[]]
 Import["NewtonsMethod.wl"]
 Import["CubicFunctions.wl"]
 Import["GraeffesMethod.wl"]
+Import["QuadraticFunctions.wl"]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
+(*General Formulas*)
+
+
+(* ::Subsection:: *)
+(*Quadratic Functions*)
+
+
+expr = x^2+2x+1
+QuadraticRoots[expr,x]
+
+
+(* ::Subsection::Closed:: *)
 (*Cubic Functions*)
 
 

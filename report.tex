@@ -172,6 +172,14 @@ Thus we have
 	\zeta_j^{2^r}\approx-\frac{a_j^{(r)}}{a_{j+1}^{(r)}}.
 \end{equation}
 
+\subsection{Effectiveness}
+
+The run-time of Graeffe's Method is $\mathcal{O}(n^2)$ for each iteration, where $n$ is the degree of the polynomial.
+Thus $r$ Graeffe Repitions is $\mathcal{O}(rn^2)$.
+
+The biggest weakness of Graeffe's Method is that the coefficients of $p_r$ often become too large for most computers, 
+overflowing the floating-point system.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

@@ -76,7 +76,7 @@ NewtonsMethodRoots[expr,{x,0},5]
 
 (* https://en.wikipedia.org/wiki/Graeffe%27s_method *)
 (* http://mathworld.wolfram.com/GraeffesMethod.html *)
-(* Done here in Mathematica: 
+(* Also done here in Mathematica: 
 http://mathfaculty.fullerton.edu/mathews/n2003/GraeffeMethodMod.html *)
 
 
@@ -84,12 +84,18 @@ Clear[x,expr]
 expr = 24 + 14x - 13x^2 -2x^3 + x^4
 
 
+(* The 1st and second Graeffe Iterations. *)
 GraeffeIteration[expr,x,1]//Expand
 GraeffeIteration[expr,x,2]//Expand
 
 
 Solve[expr==0,x]
 GraeffeFindRoots[expr,x,2]//N
+
+
+(* ::Text:: *)
+(*The signs of the roots can be found by evaluating p at the approximations.*)
+(*The higher the number of iterations, the more accurate Graeffe's Method is.*)
 
 
 (* ::Section::Closed:: *)
@@ -99,7 +105,7 @@ GraeffeFindRoots[expr,x,2]//N
 (* https://en.wikipedia.org/wiki/Durand%E2%80%93Kerner_method *)
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Analytic Functions*)
 
 
@@ -135,9 +141,10 @@ Total[%]
 (*Numerically finding roots*)
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Misc*)
 
 
 (* https://reference.wolfram.com/language/ref/format/LaTeX.html *)
-(*Import["report.tex","OutputFile"\[Rule]"Main.nb"]*)
+(* Convert TeX document to Mathematica notebook because why not. *)
+Import["report.tex","OutputFile"->"report.nb"];

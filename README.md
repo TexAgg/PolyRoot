@@ -25,4 +25,5 @@ Various academic papers found over the subject are saved [here](https://dl.dropb
 ---
 
 https://bitbucket.org/gaikema/polyroot/src
+
 https://github.com/TexAgg/PolyRoot

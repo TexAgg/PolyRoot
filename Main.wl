@@ -111,11 +111,32 @@ GraeffeFindRoots[expr,x,2]//N
 (*The higher the number of iterations, the more accurate Graeffe's Method is.*)
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Durand-Kerner Method*)
 
 
 (* https://en.wikipedia.org/wiki/Durand%E2%80%93Kerner_method *)
+(* https://ezekiel.encs.vancouver.wsu.edu/~cs330/projects/dk/DK-method.pdf *)
+
+
+expr = x^3-3x^2+3x-5
+
+
+CoefficientList[expr,x]//Last
+
+
+(* Use Rouche's Theorem to find a disk containing all the roots. 
+https://en.wikipedia.org/wiki/Rouch%C3%A9%27s_theorem 
+https://en.wikipedia.org/wiki/Properties_of_polynomial_roots#Based_on_the_Rouch.C3.A9_theorem *)
+
+Module[{n,coef,ak,tk,elem,R},
+	n = Exponent[expr,x];
+	coef = CoefficientList[expr,x];
+	ak = Last[coef]//Abs;
+	tk = Take[coef,n]//Abs;
+	elem = Total[tk]*(1/ak);
+	R = Max[1,elem]
+]
 
 
 (* ::Section::Closed:: *)

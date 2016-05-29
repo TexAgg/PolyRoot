@@ -3,6 +3,7 @@
 (* :Title: Cubic Functions *)
 (* :Context: CubicFunctions` *)
 (* :Author: Matt Gaikema *)
+(* :Date: 5/25/16 *)
 (* :Mathematica Version: 10.4 *)
 (* :Keywords: Roots, Cubic Polynomials *)
 

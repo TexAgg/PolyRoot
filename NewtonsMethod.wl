@@ -3,6 +3,7 @@
 (* :Title: Newton's Method *)
 (* :Context: NewtonsMethod` *)
 (* :Author: Matt Gaikema *)
+(* :Date: 5/19/16 *)
 (* :Mathematica Version: 10.4 *)
 (* :Keywords: Roots, Polynomials *)
 

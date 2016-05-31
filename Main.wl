@@ -122,21 +122,46 @@ GraeffeFindRoots[expr,x,2]//N
 expr = x^3-3x^2+3x-5
 
 
+(* These are the real roots. *)
+Solve[expr==0,x]//N
+
+
 CoefficientList[expr,x]//Last
+
+
+(* ::Subsection:: *)
+(*Public Test*)
 
 
 (* Use Rouche's Theorem to find a disk containing all the roots. 
 https://en.wikipedia.org/wiki/Rouch%C3%A9%27s_theorem 
 https://en.wikipedia.org/wiki/Properties_of_polynomial_roots#Based_on_the_Rouch.C3.A9_theorem *)
 
-Module[{n,coef,ak,tk,elem,R},
+Module[{n,coef,ak,tk,elem,R,z0,Q,f},
+	f = Function[x,Evaluate[expr]];
+	Print[f[x]];
 	n = Exponent[expr,x];
 	coef = CoefficientList[expr,x];
 	ak = Last[coef]//Abs;
 	tk = Take[coef,n]//Abs;
 	elem = Total[tk]*(1/ak);
-	R = Max[1,elem]
+	R = Max[1,elem];
+	Print[R];
+	\[Theta] = Range[0,n-1] * 2 Pi/n;
+	Print[\[Theta]];
+	(* These are the initial guesses. *)
+	z0 = R*(Cos[\[Theta]]+I Sin[\[Theta]]);
+
+	Q = {};
+	For[j=1,j<=n,j++,
+		AppendTo[Q,Times@@Delete[z0,j]];
+	];
+	Print[Q];
+	z1 = z0 - f[z0]/Q
 ]
+
+
+N[%]
 
 
 (* ::Section::Closed:: *)

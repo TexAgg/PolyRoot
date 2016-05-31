@@ -2,6 +2,10 @@
 Implementing and comparing different algorithms for finding roots of polynomials.
 The report, or whatever is completed so far, can be found [here](https://dl.dropboxusercontent.com/s/9waa7il556qoka1/report.pdf?dl=0).
 
+This is purely a demonstration.
+To efficiently solve a polynomial in Mathematica use [Root](https://reference.wolfram.com/language/ref/Root.html) 
+or [FindRoot](https://reference.wolfram.com/language/ref/FindRoot.html).
+
 ---
 
 ## Resources

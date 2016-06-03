@@ -83,7 +83,7 @@ expr
 NewtonsMethodRoots[expr,{x,0},5]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Graeffe's Method*)
 
 

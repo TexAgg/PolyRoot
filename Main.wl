@@ -29,6 +29,7 @@ Import["NewtonsMethod.wl"]
 Import["CubicFunctions.wl"]
 Import["GraeffesMethod.wl"]
 Import["QuadraticFunctions.wl"]
+Import["DurandKernerMethod.wl"]
 
 
 (* ::Section:: *)
@@ -129,7 +130,7 @@ Solve[expr==0,x]//N
 CoefficientList[expr,x]//Last
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Public Test*)
 
 
@@ -151,6 +152,7 @@ Module[{n,coef,ak,tk,elem,R,z0,Q,f},
 	Print[\[Theta]];
 	(* These are the initial guesses. *)
 	z0 = R*(Cos[\[Theta]]+I Sin[\[Theta]]);
+	Print[z0];
 
 	Q = {};
 	For[j=1,j<=n,j++,
@@ -162,6 +164,16 @@ Module[{n,coef,ak,tk,elem,R,z0,Q,f},
 
 
 N[%]
+
+
+(* ::Subsection:: *)
+(*Package test*)
+
+
+?DKFindRoots
+
+
+DKFindRoots[expr,x,3]
 
 
 (* ::Section::Closed:: *)

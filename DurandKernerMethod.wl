@@ -14,7 +14,7 @@ BeginPackage["DurandKernerMethod`"]
 DKFindRoots::usage = "Perform n iterations of the Durand-Kerner method to find the roots of a function."
 
 
-(*Begin["`Private`"]*)
+Begin["`Private`"]
 
 
 (* ::Section:: *)
@@ -81,7 +81,7 @@ DKFindRoots[p0_, x_, n_] := Module[{f, zj},
 ]
 
 
-(*End[]*)
+End[]
 
 
 EndPackage[]

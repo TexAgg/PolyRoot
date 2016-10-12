@@ -130,7 +130,10 @@ Solve[expr==0,x]//N
 CoefficientList[expr,x]//Last
 
 
-(* ::Subsection::Closed:: *)
+$MachinePrecision
+
+
+(* ::Subsection:: *)
 (*Public Test*)
 
 
@@ -174,6 +177,9 @@ N[%]
 
 
 DKFindRoots[expr,x,3]
+
+
+$MachinePrecision
 
 
 (* ::Section::Closed:: *)

@@ -9,8 +9,8 @@ $(TEXFILE).pdf: $(TEXFILE).tex
 
 .PHONY: clean
 clean:
-	del *.aux *.blg *.out *.bbl *.log $(TEXFILE).run.xml $(TEXFILE)-blx.bib $(TEXFILE).synctex.gz
+	rm -f *.aux *.blg *.out *.bbl *.log $(TEXFILE).run.xml $(TEXFILE)-blx.bib $(TEXFILE).synctex.gz
 	
 .PHONY: view
 view: $(TEXFILE).pdf
-	$(TEXFILE).pdf &
+	evince $(TEXFILE).pdf

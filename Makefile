@@ -1,6 +1,6 @@
 TEXFILE=report
 
-$(TEXFILE).pdf: $(TEXFILE).tex
+$(TEXFILE).pdf: $(TEXFILE).tex sources.bib
 	pdflatex $(TEXFILE)
 	pdflatex $(TEXFILE)
 	bibtex $(TEXFILE)
